@@ -53,11 +53,16 @@ f0 41 00 00 00 00 00 13
 | 60 00 00 24 | [Slider](#Slider)                                       | Amp Volume                |
 | 60 00 00 23 | [Slider](#Slider)                                       | Amp Gain                  |
 | 60 00 00 22 | [Amp Type](#amp-type)                                   | Amp Type                  |
-| 60 00 00 2b | [Off-Slider](#Off-Slider)                               | FX2 Main                  |
+| 7f 01 01 1b | [Off-Slider](#Off-Slider)                               | FX2 Main                  |
+| 60 00 00 3e | [On/Off Button](#On-Off)                                | FX2 On/Off                |
 | 60 00 01 38 | [FX2 Main Type](#fx2-main-type)                         | FX2 Main Type             |
 | 60 00 01 39 | [FX2 FX Secondary Type](#fx2-fx-secondary-type)         | FX2 FX Secondary Type     |
 | 60 00 01 3a | [FX2 Delay Secondary Type](#fx2-delay-secondary-type)   | FX2 Delay Secondary Type  |
 | 60 00 01 3b | [FX2 Reverb Secondary Type](#fx2-reverb-secondary-type) | FX2 Reverb Secondary Type |
+| 7f 01 01 1a | [Off-Slider](#Off-Slider)                               | FX1 Main                  |
+|             | [On/Off Button](#On-Off)                                | FX1 On/Off                |
+|             | [FX2 FX Secondary Type](#fx2-fx-secondary-type)         | FX1 FX Secondary Type     |
+
 
 # FX2 FX
 
@@ -66,34 +71,33 @@ f0 41 00 00 00 00 00 13
 A change of the FX2 Main will trigger a change in *Low Rate* and *High Rate* that is send from the AMP.
 
 
-| addr        | type                      | name             |
-| ----------- | ------------------------- | ---------------- |
-| 60 00 00 2b | [Off-Slider](#Off-Slider) | FX2 Main         |
-| 60 00 04 01 | [Slider](#Slider)         | Chorus Low Rate  |
-| 60 00 04 05 | [Slider](#Slider)         | Chorus High Rate |
-| 60 00 04 02 | [Slider](#Slider)         | Low Depth        |
-| 60 00 04 06 | [Slider](#Slider)         | High Depth       |
-| 60 00 04 03 | [Pre Delay](#pre-delay)   | Low Pre Delay    |
-| 60 00 04 07 | [Pre Delay](#pre-delay)   | High Pre Delay   |
-| 60 00 04 04 | [Slider](#Slider)         | Low Level        |
-| 60 00 04 08 | [Slider](#Slider)         | High Level       |
-| 60 00 04 09 | [Slider](#Slider)         | Direct Mix       |
-| 60 00 04 00 | [Xover Freq](#xover-freq) | Xover Freq       |
+| addr        | type                      | name             | default |
+| ----------- | ------------------------- | ---------------- | ------- |
+| 60 00 04 01 | [Slider](#Slider)         | Chorus Low Rate  | 20      |
+| 60 00 04 05 | [Slider](#Slider)         | Chorus High Rate | 10      |
+| 60 00 04 02 | [Slider](#Slider)         | Low Depth        | 35      |
+| 60 00 04 06 | [Slider](#Slider)         | High Depth       | 48      |
+| 60 00 04 03 | [Pre Delay](#pre-delay)   | Low Pre Delay    | 3.0ms   |
+| 60 00 04 07 | [Pre Delay](#pre-delay)   | High Pre Delay   | 1.5ms   |
+| 60 00 04 04 | [Slider](#Slider)         | Low Level        | 15      |
+| 60 00 04 08 | [Slider](#Slider)         | High Level       | 72      |
+| 60 00 04 09 | [Slider](#Slider)         | Direct Mix       | 85      |
+| 60 00 04 00 | [Xover Freq](#xover-freq) | Xover Freq       | 400Hz   |
 
 ## Flanger
 
 A change of the FX2 Main will trigger a change in *Rate* that is send from the AMP.
 
 
-| addr        | type                                | name         |
-| ----------- | ----------------------------------- | ------------ |
-| 60 00 04 0a | [Slider](#Slider)                   | Rate         |
-| 60 00 04 0b | [Slider](#Slider)                   | Depth        |
-| 60 00 04 0d | [Slider](#Slider)                   | Resonance    |
-| 60 00 04 0c | [Slider](#Slider)                   | Manual       |
-| 60 00 04 0f | [Flanger Low Cut](#flanger-low-cut) | Low Cut      |
-| 60 00 04 10 | [Slider](#Slider)                   | Effect Level |
-| 60 00 04 11 | [Slider](#Slider)                   | Direct Mix   |
+| addr        | type                                | name         | default |
+| ----------- | ----------------------------------- | ------------ | ------- |
+| 60 00 04 0a | [Slider](#Slider)                   | Rate         | 24      |
+| 60 00 04 0b | [Slider](#Slider)                   | Depth        | 58      |
+| 60 00 04 0d | [Slider](#Slider)                   | Resonance    | 80      |
+| 60 00 04 0c | [Slider](#Slider)                   | Manual       | 55      |
+| 60 00 04 0f | [Flanger Low Cut](#flanger-low-cut) | Low Cut      | 340Hz   |
+| 60 00 04 10 | [Slider](#Slider)                   | Effect Level | 50      |
+| 60 00 04 11 | [Slider](#Slider)                   | Direct Mix   | 15      |
 
 # Value Types
 
